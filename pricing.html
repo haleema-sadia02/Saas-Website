@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Nexora Pricing - Simple, transparent plans for teams of every size. Start free, scale as you grow." />
+  <title>Pricing — Nexora</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+</head>
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo"><span class="logo-dot"></span> Nexora</a>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="pricing.html" class="active">Pricing</a>
+          <a href="dashboard.html">Dashboard</a>   <!-- ⭐ NEW -->
+
+        <a href="contact.html">Contact</a>
+      </nav>
+      <a href="contact.html" class="btn btn-primary nav-cta">Get Started</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ================= PAGE HERO ================= -->
+  <section class="page-hero">
+    <div class="hero-glow"></div>
+    <div class="container" style="position:relative; z-index:1;">
+      <span class="eyebrow" data-animate="fade-up">Pricing</span>
+      <h1 data-animate="fade-up" data-delay="0.1">
+        Simple pricing. <span class="gradient-text">Serious value.</span>
+      </h1>
+      <p class="page-hero-sub" data-animate="fade-up" data-delay="0.2">
+        Start free. Upgrade when you're ready. Cancel anytime — no questions asked.
+      </p>
+    </div>
+  </section>
+
+  <!-- ================= PRICING CARDS ================= -->
+  <section class="pricing-section">
+    <div class="container">
+      <div class="pricing-grid">
+
+        <!-- Starter -->
+        <div class="pricing-card tilt-card" data-animate="fade-up" data-tilt>
+          <h3 class="plan-name">Starter</h3>
+          <p class="plan-desc">For individuals exploring analytics.</p>
+          <div class="plan-price">
+            <span class="currency">$</span>
+            <span class="amount">0</span>
+            <span class="period">/month</span>
+          </div>
+          <a href="contact.html" class="btn btn-ghost plan-btn">Get Started Free</a>
+          <ul class="plan-features">
+            <li>Up to 3 dashboards</li>
+            <li>1 data source</li>
+            <li>7-day data history</li>
+            <li>Community support</li>
+          </ul>
+        </div>
+
+        <!-- Pro (Popular) -->
+        <div class="pricing-card popular tilt-card" data-animate="fade-up" data-delay="0.1" data-tilt>
+          <span class="popular-badge">Most Popular</span>
+          <h3 class="plan-name">Pro</h3>
+          <p class="plan-desc">For growing teams that need more power.</p>
+          <div class="plan-price">
+            <span class="currency">$</span>
+            <span class="amount">29</span>
+            <span class="period">/user/month</span>
+          </div>
+          <a href="contact.html" class="btn btn-primary plan-btn">Start 14-Day Trial</a>
+          <ul class="plan-features">
+            <li>Unlimited dashboards</li>
+            <li>10+ data sources</li>
+            <li>AI insights engine</li>
+            <li>90-day data history</li>
+            <li>Slack + email reports</li>
+            <li>Priority support</li>
+          </ul>
+        </div>
+
+        <!-- Enterprise -->
+        <div class="pricing-card tilt-card" data-animate="fade-up" data-delay="0.2" data-tilt>
+          <h3 class="plan-name">Enterprise</h3>
+          <p class="plan-desc">For organizations with custom needs.</p>
+          <div class="plan-price">
+            <span class="currency">$</span>
+            <span class="amount">Custom</span>
+          </div>
+          <a href="contact.html" class="btn btn-ghost plan-btn">Contact Sales</a>
+          <ul class="plan-features">
+            <li>Everything in Pro</li>
+            <li>Unlimited data sources</li>
+            <li>SSO / SAML / SCIM</li>
+            <li>Unlimited history</li>
+            <li>Dedicated success manager</li>
+            <li>Custom SLAs & contracts</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= COMPARISON TABLE ================= -->
+  <section class="compare-section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow" data-animate="fade-up">Compare Plans</span>
+        <h2 data-animate="fade-up" data-delay="0.1">
+          Find the <span class="gradient-text">right fit.</span>
+        </h2>
+      </div>
+
+      <div class="compare-table-wrap" data-animate="fade-up" data-delay="0.2">
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>Starter</th>
+              <th class="highlight">Pro</th>
+              <th>Enterprise</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Dashboards</td>
+              <td>3</td>
+              <td class="highlight">Unlimited</td>
+              <td>Unlimited</td>
+            </tr>
+            <tr>
+              <td>Data Sources</td>
+              <td>1</td>
+              <td class="highlight">10+</td>
+              <td>Unlimited</td>
+            </tr>
+            <tr>
+              <td>AI Insights</td>
+              <td>—</td>
+              <td class="highlight">✓</td>
+              <td>✓</td>
+            </tr>
+            <tr>
+              <td>Data History</td>
+              <td>7 days</td>
+              <td class="highlight">90 days</td>
+              <td>Unlimited</td>
+            </tr>
+            <tr>
+              <td>Scheduled Reports</td>
+              <td>—</td>
+              <td class="highlight">✓</td>
+              <td>✓</td>
+            </tr>
+            <tr>
+              <td>SSO / SAML</td>
+              <td>—</td>
+              <td class="highlight">—</td>
+              <td>✓</td>
+            </tr>
+            <tr>
+              <td>Support</td>
+              <td>Community</td>
+              <td class="highlight">Priority</td>
+              <td>Dedicated</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FAQ ================= -->
+  <section class="faq-section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow" data-animate="fade-up">FAQ</span>
+        <h2 data-animate="fade-up" data-delay="0.1">
+          Questions? <span class="gradient-text">Answered.</span>
+        </h2>
+      </div>
+
+      <div class="faq-list" data-animate="fade-up" data-delay="0.2">
+        <details class="faq-item">
+          <summary>Can I switch plans later?</summary>
+          <p>Absolutely. Upgrade or downgrade anytime from your dashboard — changes take effect immediately.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Is there a free trial on Pro?</summary>
+          <p>Yes — 14 days, full features, no credit card required. Cancel anytime during the trial at no cost.</p>
+        </details>
+        <details class="faq-item">
+          <summary>What payment methods do you accept?</summary>
+          <p>All major credit cards, ACH transfers, and invoicing for Enterprise customers.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Do you offer discounts for startups or nonprofits?</summary>
+          <p>Yes! We offer up to 50% off for early-stage startups and registered nonprofits. Contact us for details.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Is my data secure?</summary>
+          <p>SOC 2 Type II certified, GDPR compliant, end-to-end encrypted. Your data is never sold or shared.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CTA ================= -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-box" data-animate="fade-up">
+        <h2>Still not sure?</h2>
+        <p>Talk to our team — we'll help you pick the right plan.</p>
+        <a href="contact.html" class="btn btn-primary">Talk to Sales</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="logo"><span class="logo-dot"></span> Nexora</a>
+        <p>AI-powered analytics for modern teams.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Product</h4>
+        <a href="services.html">Features</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="services.html">Integrations</a>
+        <a href="dashboard.html">Live Demo</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="#">Careers</a>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Security</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Nexora Inc. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="main.js" defer></script>
+</body>
+</html>

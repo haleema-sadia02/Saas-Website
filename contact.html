@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contact Nexora - Get in touch with our team for demos, support, or partnership inquiries." />
+  <title>Contact — Nexora</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+</head>
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo"><span class="logo-dot"></span> Nexora</a>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="pricing.html">Pricing</a>
+          <a href="dashboard.html">Dashboard</a>   <!-- ⭐ NEW -->
+
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
+      <a href="contact.html" class="btn btn-primary nav-cta">Get Started</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ================= PAGE HERO ================= -->
+  <section class="page-hero">
+    <div class="hero-glow"></div>
+    <div class="container" style="position:relative; z-index:1;">
+      <span class="eyebrow" data-animate="fade-up">Contact</span>
+      <h1 data-animate="fade-up" data-delay="0.1">
+        Let's <span class="gradient-text">talk.</span>
+      </h1>
+      <p class="page-hero-sub" data-animate="fade-up" data-delay="0.2">
+        Questions, demos, partnerships — we're here. We reply within 24 hours.
+      </p>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT SECTION ================= -->
+  <section class="contact-section">
+    <div class="container contact-grid">
+
+      <!-- Contact Info -->
+      <div class="contact-info" data-animate="fade-up">
+        <h2>Get in touch</h2>
+        <p>Prefer email or a quick call? Here's how to reach us directly.</p>
+
+        <div class="contact-item">
+          <div class="contact-icon">📧</div>
+          <div>
+            <h4>Email</h4>
+            <a href="mailto:hello@nexora.com">hello@nexora.com</a>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon">📞</div>
+          <div>
+            <h4>Phone</h4>
+            <a href="tel:+1234567890">+1 (234) 567-890</a>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon">📍</div>
+          <div>
+            <h4>Office</h4>
+            <p>548 Market St, San Francisco, CA 94104</p>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon">💬</div>
+          <div>
+            <h4>Live Chat</h4>
+            <p>Mon–Fri, 9am–6pm PT</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="contact-form-wrap" data-animate="fade-up" data-delay="0.15">
+        <form class="contact-form" id="contactForm" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" placeholder="Jane Doe" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="jane@company.com" required />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="company">Company (optional)</label>
+            <input type="text" id="company" name="company" placeholder="Acme Inc." />
+          </div>
+
+          <div class="form-group">
+            <label for="subject">I'm interested in…</label>
+            <select id="subject" name="subject" required>
+              <option value="">Select a topic</option>
+              <option value="demo">Booking a demo</option>
+              <option value="pricing">Pricing & plans</option>
+              <option value="support">Technical support</option>
+              <option value="partnership">Partnership</option>
+              <option value="other">Something else</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell us a bit about what you need…" required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary form-submit" id="submitBtn">
+            <span class="btn-text">Send Message</span>
+          </button>
+
+          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= CTA ================= -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-box" data-animate="fade-up">
+        <h2>Ready to see Nexora live?</h2>
+        <p>Book a 20-minute demo — see your own data in action.</p>
+        <a href="mailto:hello@nexora.com" class="btn btn-primary">Email Us Directly</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="logo"><span class="logo-dot"></span> Nexora</a>
+        <p>AI-powered analytics for modern teams.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Product</h4>
+        <a href="services.html">Features</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="services.html">Integrations</a>
+        <a href="dashboard.html">Live Demo</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="#">Careers</a>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Security</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Nexora Inc. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="main.js" defer></script>
+</body>
+</html>

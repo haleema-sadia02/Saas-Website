@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Nexora Services - Explore our AI analytics features, integrations, and enterprise solutions." />
+  <title>Services — Nexora</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+</head>
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo"><span class="logo-dot"></span> Nexora</a>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html" class="active">Services</a>
+        <a href="pricing.html">Pricing</a>
+          <a href="dashboard.html">Dashboard</a>   <!-- ⭐ NEW -->
+
+        <a href="contact.html">Contact</a>
+      </nav>
+      <a href="contact.html" class="btn btn-primary nav-cta">Get Started</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ================= PAGE HERO ================= -->
+  <section class="page-hero">
+    <div class="hero-glow"></div>
+    <div class="container" style="position:relative; z-index:1;">
+      <span class="eyebrow" data-animate="fade-up">Services & Platform</span>
+      <h1 data-animate="fade-up" data-delay="0.1">
+        One platform. <span class="gradient-text">Every insight.</span>
+      </h1>
+      <p class="page-hero-sub" data-animate="fade-up" data-delay="0.2">
+        From real-time dashboards to AI-powered forecasting — everything your
+        team needs to turn data into decisions.
+      </p>
+    </div>
+  </section>
+
+  <!-- ================= MAIN SERVICES ================= -->
+  <section class="services-section">
+    <div class="container">
+      <div class="services-grid">
+        <article class="service-card tilt-card" data-animate="fade-up" data-tilt>
+          <div class="service-num">01</div>
+          <h3>Real-time Dashboards</h3>
+          <p>Build beautiful, live dashboards in minutes — no SQL required. Drag, drop, and share.</p>
+          <ul class="service-list">
+            <li>Live data streaming</li>
+            <li>50+ chart types</li>
+            <li>One-click sharing</li>
+          </ul>
+        </article>
+
+        <article class="service-card tilt-card" data-animate="fade-up" data-delay="0.1" data-tilt>
+          <div class="service-num">02</div>
+          <h3>AI Insights Engine</h3>
+          <p>Our models scan billions of rows to surface anomalies, trends, and opportunities automatically.</p>
+          <ul class="service-list">
+            <li>Anomaly detection</li>
+            <li>Predictive forecasting</li>
+            <li>Natural-language queries</li>
+          </ul>
+        </article>
+
+        <article class="service-card tilt-card" data-animate="fade-up" data-delay="0.2" data-tilt>
+          <div class="service-num">03</div>
+          <h3>Automated Reporting</h3>
+          <p>Schedule reports that land in Slack, email, or Notion — always accurate, always on time.</p>
+          <ul class="service-list">
+            <li>Custom schedules</li>
+            <li>Multi-channel delivery</li>
+            <li>PDF, CSV, live links</li>
+          </ul>
+        </article>
+
+        <article class="service-card tilt-card" data-animate="fade-up" data-tilt>
+          <div class="service-num">04</div>
+          <h3>Data Integrations</h3>
+          <p>Connect 100+ tools in one click. Everything flows into one unified source of truth.</p>
+          <ul class="service-list">
+            <li>Native connectors</li>
+            <li>REST & GraphQL APIs</li>
+            <li>Custom webhooks</li>
+          </ul>
+        </article>
+
+        <article class="service-card tilt-card" data-animate="fade-up" data-delay="0.1" data-tilt>
+          <div class="service-num">05</div>
+          <h3>Enterprise Security</h3>
+          <p>SOC 2 Type II, GDPR, HIPAA-ready. Your data stays yours — encrypted, always.</p>
+          <ul class="service-list">
+            <li>SSO / SAML</li>
+            <li>Role-based access</li>
+            <li>Audit logs</li>
+          </ul>
+        </article>
+
+        <article class="service-card tilt-card" data-animate="fade-up" data-delay="0.2" data-tilt>
+          <div class="service-num">06</div>
+          <h3>Dedicated Support</h3>
+          <p>Real humans, fast responses. Enterprise plans get a dedicated success manager.</p>
+          <ul class="service-list">
+            <li>24/7 chat support</li>
+            <li>Onboarding sessions</li>
+            <li>Custom SLAs</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PROCESS ================= -->
+  <section class="process-section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow" data-animate="fade-up">How It Works</span>
+        <h2 data-animate="fade-up" data-delay="0.1">
+          Live in <span class="gradient-text">under 10 minutes.</span>
+        </h2>
+      </div>
+
+      <div class="process-grid">
+        <div class="process-step" data-animate="fade-up">
+          <div class="step-num">1</div>
+          <h3>Connect</h3>
+          <p>Plug in your data sources with one-click integrations.</p>
+        </div>
+        <div class="process-step" data-animate="fade-up" data-delay="0.1">
+          <div class="step-num">2</div>
+          <h3>Explore</h3>
+          <p>Ask questions in plain English — our AI does the heavy lifting.</p>
+        </div>
+        <div class="process-step" data-animate="fade-up" data-delay="0.2">
+          <div class="step-num">3</div>
+          <h3>Share</h3>
+          <p>Send dashboards, reports, and alerts to your whole team.</p>
+        </div>
+        <div class="process-step" data-animate="fade-up" data-delay="0.3">
+          <div class="step-num">4</div>
+          <h3>Decide</h3>
+          <p>Act on insights instantly — with confidence, not guesswork.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= INTEGRATIONS ================= -->
+  <section class="integrations-section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow" data-animate="fade-up">Integrations</span>
+        <h2 data-animate="fade-up" data-delay="0.1">
+          Plays well with <span class="gradient-text">your stack.</span>
+        </h2>
+      </div>
+
+      <div class="integrations-grid" data-animate="fade-up" data-delay="0.2">
+        <div class="integration-chip">Slack</div>
+        <div class="integration-chip">Stripe</div>
+        <div class="integration-chip">HubSpot</div>
+        <div class="integration-chip">Notion</div>
+        <div class="integration-chip">GitHub</div>
+        <div class="integration-chip">Salesforce</div>
+        <div class="integration-chip">Postgres</div>
+        <div class="integration-chip">Snowflake</div>
+        <div class="integration-chip">BigQuery</div>
+        <div class="integration-chip">Zapier</div>
+        <div class="integration-chip">Linear</div>
+        <div class="integration-chip">Figma</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CTA ================= -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-box" data-animate="fade-up">
+        <h2>See Nexora in action.</h2>
+        <p>Book a 20-minute demo with our team — no pressure, no sales pitch.</p>
+        <a href="contact.html" class="btn btn-primary">Book a Demo</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="logo"><span class="logo-dot"></span> Nexora</a>
+        <p>AI-powered analytics for modern teams.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Product</h4>
+        <a href="services.html">Features</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="services.html">Integrations</a>
+        <a href="dashboard.html">Live Demo</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="#">Careers</a>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Security</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Nexora Inc. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="main.js" defer></script>
+</body>
+</html>

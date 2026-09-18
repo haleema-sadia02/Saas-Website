@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Nexora - AI-powered analytics platform for modern teams. Get real-time insights, automate reports, and make smarter decisions." />
+  <title>Nexora — AI Analytics for Modern Teams</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- GSAP (animation library) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+</head>
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-dot"></span> Nexora
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="pricing.html">Pricing</a>
+          <a href="dashboard.html">Dashboard</a>   <!-- ⭐ NEW -->
+
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <a href="contact.html" class="btn btn-primary nav-cta">Get Started</a>
+
+      <!-- Mobile menu button -->
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ================= HERO ================= -->
+  <section class="hero">
+    <div class="hero-glow"></div>
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <span class="badge" data-animate="fade-up">
+          ✨ New — AI Insights 2.0 is live
+        </span>
+
+        <h1 data-animate="fade-up" data-delay="0.1">
+          Turn your data into
+          <span class="gradient-text">decisions that matter.</span>
+        </h1>
+
+        <p class="hero-sub" data-animate="fade-up" data-delay="0.2">
+          Nexora is the AI-powered analytics platform that helps modern teams
+          uncover insights, automate reporting, and move faster — all in one place.
+        </p>
+
+        <div class="hero-cta" data-animate="fade-up" data-delay="0.3">
+          <a href="contact.html" class="btn btn-primary">Start Free Trial</a>
+          <a href="services.html" class="btn btn-ghost">See How It Works →</a>
+        </div>
+
+        <div class="hero-stats" data-animate="fade-up" data-delay="0.4">
+          <div><strong>10k+</strong><span>Teams</span></div>
+          <div><strong>99.9%</strong><span>Uptime</span></div>
+          <div><strong>4.9★</strong><span>Rated</span></div>
+        </div>
+      </div>
+
+      <!-- 3D-style floating card mockup -->
+      <div class="hero-visual" data-animate="fade-up" data-delay="0.3">
+        <div class="glass-card tilt-card" data-tilt>
+          <div class="card-header">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+            <span class="card-title">Analytics Dashboard</span>
+          </div>
+          <div class="card-body">
+            <div class="chart-bar" style="--h: 60%"></div>
+            <div class="chart-bar" style="--h: 85%"></div>
+            <div class="chart-bar" style="--h: 45%"></div>
+            <div class="chart-bar" style="--h: 95%"></div>
+            <div class="chart-bar" style="--h: 70%"></div>
+            <div class="chart-bar" style="--h: 55%"></div>
+          </div>
+          <div class="card-footer">
+            <span class="pulse-dot"></span> Live data syncing…
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= LOGOS / TRUST ================= -->
+  <section class="logos">
+    <div class="container">
+      <p class="logos-label" data-animate="fade-up">Trusted by teams at</p>
+      <div class="logos-grid" data-animate="fade-up" data-delay="0.1">
+        <span>Acme</span><span>Northwind</span><span>Vertex</span>
+        <span>Lumen</span><span>Orbit</span><span>Pulse</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FEATURES ================= -->
+  <section class="features" id="features">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow" data-animate="fade-up">Features</span>
+        <h2 data-animate="fade-up" data-delay="0.1">
+          Everything you need to <span class="gradient-text">ship faster.</span>
+        </h2>
+        <p data-animate="fade-up" data-delay="0.2">
+          Powerful tools designed for product, growth, and data teams.
+        </p>
+      </div>
+
+      <div class="feature-grid">
+        <article class="feature-card tilt-card" data-animate="fade-up" data-tilt>
+          <div class="feature-icon">⚡</div>
+          <h3>Real-time Analytics</h3>
+          <p>Live dashboards that update the moment your data changes.</p>
+        </article>
+
+        <article class="feature-card tilt-card" data-animate="fade-up" data-delay="0.1" data-tilt>
+          <div class="feature-icon">🤖</div>
+          <h3>AI Insights</h3>
+          <p>Automatically surface anomalies and trends you'd miss.</p>
+        </article>
+
+        <article class="feature-card tilt-card" data-animate="fade-up" data-delay="0.2" data-tilt>
+          <div class="feature-icon">🔒</div>
+          <h3>Enterprise Security</h3>
+          <p>SOC 2, GDPR, and end-to-end encryption out of the box.</p>
+        </article>
+
+        <article class="feature-card tilt-card" data-animate="fade-up" data-delay="0.3" data-tilt>
+          <div class="feature-icon">🔗</div>
+          <h3>100+ Integrations</h3>
+          <p>Connect Slack, Stripe, HubSpot, and anything with an API.</p>
+        </article>
+
+        <article class="feature-card tilt-card" data-animate="fade-up" data-delay="0.4" data-tilt>
+          <div class="feature-icon">📊</div>
+          <h3>Custom Reports</h3>
+          <p>Build and schedule reports that go straight to your inbox.</p>
+        </article>
+
+        <article class="feature-card tilt-card" data-animate="fade-up" data-delay="0.5" data-tilt>
+          <div class="feature-icon">🚀</div>
+          <h3>Lightning Fast</h3>
+          <p>Query billions of rows in milliseconds with our engine.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+    <!-- ================= 3D PRODUCT MOCKUP ================= -->
+  <section class="product-3d-section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow" data-animate="fade-up">Product Preview</span>
+        <h2 data-animate="fade-up" data-delay="0.1">
+          Beautiful on <span class="gradient-text">every screen.</span>
+        </h2>
+       
+      </div>
+
+      <div class="mockup-stage" data-animate="fade-up" data-delay="0.2">
+        <div class="laptop-3d" id="laptop3d">
+          <!-- Screen -->
+          <div class="laptop-screen">
+            <div class="screen-topbar">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+              <span class="screen-title">nexora.app/dashboard</span>
+            </div>
+            <div class="screen-body">
+              <div class="screen-sidebar">
+                <div class="sb-item active"></div>
+                <div class="sb-item"></div>
+                <div class="sb-item"></div>
+                <div class="sb-item"></div>
+              </div>
+              <div class="screen-main">
+                <div class="screen-kpis">
+                  <div class="sk"><span></span><strong></strong></div>
+                  <div class="sk"><span></span><strong></strong></div>
+                  <div class="sk"><span></span><strong></strong></div>
+                </div>
+                <div class="screen-chart">
+                  <div class="sc-bar" style="--h:55%"></div>
+                  <div class="sc-bar" style="--h:80%"></div>
+                  <div class="sc-bar" style="--h:45%"></div>
+                  <div class="sc-bar" style="--h:90%"></div>
+                  <div class="sc-bar" style="--h:65%"></div>
+                  <div class="sc-bar" style="--h:75%"></div>
+                  <div class="sc-bar" style="--h:50%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Base -->
+          <div class="laptop-base"></div>
+        </div>
+
+        <div class="mockup-glow"></div>
+      </div>
+
+      <div class="mockup-features" data-animate="fade-up" data-delay="0.3">
+        <div class="mf"><strong>10 min</strong><span>Setup time</span></div>
+        <div class="mf"><strong>100+</strong><span>Integrations</span></div>
+        <div class="mf"><strong>Real-time</strong><span>Data sync</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CTA ================= -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-box" data-animate="fade-up">
+        <h2>Ready to see Nexora in action?</h2>
+        <p>Start your 14-day free trial. No credit card required.</p>
+        <a href="contact.html" class="btn btn-primary">Get Started Free</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="logo"><span class="logo-dot"></span> Nexora</a>
+        <p>AI-powered analytics for modern teams.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Product</h4>
+        <a href="services.html">Features</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="services.html">Integrations</a>
+        <a href="dashboard.html">Live Demo</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="#">Careers</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Security</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 Nexora Inc. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="main.js" defer></script>
+</body>
+</html>

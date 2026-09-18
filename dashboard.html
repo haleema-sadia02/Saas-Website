@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Nexora Live Dashboard Demo - Explore real-time analytics, AI insights, and interactive charts." />
+  <title>Live Dashboard — Nexora</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+
+  <!-- Chart.js (dashboard charts ke liye) -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js" defer></script>
+</head>
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo"><span class="logo-dot"></span> Nexora</a>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="dashboard.html" class="active">Dashboard</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <a href="contact.html" class="btn btn-primary nav-cta">Get Started</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ================= PAGE HERO ================= -->
+  <section class="page-hero dashboard-hero">
+    <div class="hero-glow"></div>
+    <div class="container" style="position:relative; z-index:1;">
+      <span class="eyebrow" data-animate="fade-up">
+        <span class="live-dot"></span> Live Demo — Interactive
+      </span>
+      <h1 data-animate="fade-up" data-delay="0.1">
+        See Nexora <span class="gradient-text">in action.</span>
+      </h1>
+      <p class="page-hero-sub" data-animate="fade-up" data-delay="0.2">
+        Ye ek real dashboard demo hai. Filters change karo, charts update hote dekho.
+      </p>
+    </div>
+  </section>
+
+  <!-- ================= DASHBOARD ================= -->
+  <section class="dashboard-section">
+    <div class="container">
+
+      <!-- Filter Bar -->
+      <div class="dash-filters" data-animate="fade-up">
+        <div class="filter-group">
+          <label>Date Range</label>
+          <select id="dateFilter">
+            <option value="7">Last 7 days</option>
+            <option value="30" selected>Last 30 days</option>
+            <option value="90">Last 90 days</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label>Metric</label>
+          <select id="metricFilter">
+            <option value="revenue" selected>Revenue</option>
+            <option value="users">Active Users</option>
+            <option value="sessions">Sessions</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label>Region</label>
+          <select id="regionFilter">
+            <option value="global" selected>Global</option>
+            <option value="na">North America</option>
+            <option value="eu">Europe</option>
+            <option value="apac">Asia Pacific</option>
+          </select>
+        </div>
+
+        <button class="btn btn-ghost" id="refreshBtn">
+          🔄 Refresh
+        </button>
+      </div>
+
+      <!-- KPI Cards -->
+      <div class="kpi-grid">
+        <div class="kpi-card" data-animate="fade-up">
+          <div class="kpi-head">
+            <span>Total Revenue</span>
+            <span class="kpi-badge up">↑ 12.4%</span>
+          </div>
+          <div class="kpi-value">$<span id="kpiRevenue">284,590</span></div>
+          <div class="kpi-spark" id="sparkRevenue"></div>
+        </div>
+
+        <div class="kpi-card" data-animate="fade-up" data-delay="0.05">
+          <div class="kpi-head">
+            <span>Active Users</span>
+            <span class="kpi-badge up">↑ 8.1%</span>
+          </div>
+          <div class="kpi-value"><span id="kpiUsers">12,847</span></div>
+          <div class="kpi-spark" id="sparkUsers"></div>
+        </div>
+
+        <div class="kpi-card" data-animate="fade-up" data-delay="0.1">
+          <div class="kpi-head">
+            <span>Conversion Rate</span>
+            <span class="kpi-badge down">↓ 0.6%</span>
+          </div>
+          <div class="kpi-value"><span id="kpiConv">4.28</span>%</div>
+          <div class="kpi-spark" id="sparkConv"></div>
+        </div>
+
+        <div class="kpi-card" data-animate="fade-up" data-delay="0.15">
+          <div class="kpi-head">
+            <span>Avg. Session</span>
+            <span class="kpi-badge up">↑ 3.2%</span>
+          </div>
+          <div class="kpi-value"><span id="kpiSession">6:42</span></div>
+          <div class="kpi-spark" id="sparkSession"></div>
+        </div>
+      </div>
+
+      <!-- Main Chart -->
+      <div class="chart-card" data-animate="fade-up" data-delay="0.1">
+        <div class="chart-head">
+          <h3 id="mainChartTitle">Revenue Over Time</h3>
+          <div class="chart-legend">
+            <span><i class="dot-primary"></i> This period</span>
+            <span><i class="dot-muted"></i> Previous</span>
+          </div>
+        </div>
+        <div class="chart-wrap">
+          <canvas id="mainChart"></canvas>
+        </div>
+      </div>
+
+      <!-- Two Column Charts -->
+      <div class="dash-grid-2">
+        <div class="chart-card" data-animate="fade-up">
+          <div class="chart-head">
+            <h3>Traffic Sources</h3>
+          </div>
+          <div class="chart-wrap chart-wrap-sm">
+            <canvas id="doughnutChart"></canvas>
+          </div>
+          <div class="legend-list">
+            <div><i style="background:#6366F1"></i> Organic <span>42%</span></div>
+            <div><i style="background:#22D3EE"></i> Paid <span>28%</span></div>
+            <div><i style="background:#A78BFA"></i> Referral <span>18%</span></div>
+            <div><i style="background:#F472B6"></i> Direct <span>12%</span></div>
+          </div>
+        </div>
+
+        <div class="chart-card" data-animate="fade-up" data-delay="0.1">
+          <div class="chart-head">
+            <h3>Top Regions</h3>
+          </div>
+          <div class="chart-wrap chart-wrap-sm">
+            <canvas id="barChart"></canvas>
+          </div>
+        </div>
+      </div>
+
+      <!-- AI Insights Panel -->
+      <div class="insights-card" data-animate="fade-up">
+        <div class="insights-head">
+          <span class="ai-badge">🤖 AI Insights</span>
+          <span class="insights-time">Updated just now</span>
+        </div>
+        <ul class="insights-list" id="insightsList">
+          <li>
+            <strong>Anomaly detected:</strong> Revenue spiked 24% on Tuesday — likely from the new campaign launch.
+          </li>
+          <li>
+            <strong>Opportunity:</strong> European users convert 1.8× better on mobile. Consider mobile-first landing pages.
+          </li>
+          <li>
+            <strong>Risk:</strong> Churn in the Starter plan increased by 6% this week. Review onboarding flow.
+          </li>
+        </ul>
+      </div>
+
+      <!-- Data Table -->
+      <div class="table-card" data-animate="fade-up">
+        <div class="chart-head">
+          <h3>Recent Transactions</h3>
+        </div>
+        <div class="table-scroll">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Customer</th>
+                <th>Plan</th>
+                <th>Amount</th>
+                <th>Date</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="tableBody">
+              <!-- JS will populate -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= CTA ================= -->
+    <!-- ================= CTA ================= -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-box" data-animate="fade-up">
+        <h2>This was just a demo.</h2>
+        <p>Connect your own data and build dashboards like this — in under 10 minutes.</p>
+        <a href="contact.html" class="btn btn-primary">Start Free Trial</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="logo"><span class="logo-dot"></span> Nexora</a>
+        <p>AI-powered analytics for modern teams.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Product</h4>
+        <a href="services.html">Features</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="dashboard.html">Live Demo</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="#">Careers</a>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Security</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Nexora Inc. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="main.js" defer></script>
+  <script src="dashboard.js" defer></script>
+</body>
+</html>
