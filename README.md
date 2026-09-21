@@ -38,14 +38,6 @@ Saas-Website/
 └── dashboard.js
 ```
 
-## Live Demo
-
-https://saas-website-ecru.vercel.app/
-
-## GitHub Repository
-
-https://github.com/haleema-sadia02/Saas-Website
-
 ## Purpose
 
 This project was developed to practice and demonstrate front-end web development skills, including responsive design, JavaScript interactions, animations, and modern SaaS website development.
